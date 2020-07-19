@@ -1,0 +1,157 @@
+
+<head>
+<style type="text/css">
+.style1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Open Sans";
+  font-size: medium;
+  background-color: #008080;
+}
+.style2 {
+  font-family: "Open Sans";
+}
+.style3 {
+  border-collapse: collapse;
+}
+.style4 {
+  font-family: "Open Sans";
+  font-size: medium;
+}
+.style6 {
+  font-size: x-small;
+}
+.style7 {
+  font-size: medium;
+}
+.style8 {
+  font-family: "Open Sans";
+  text-align: center;
+}
+.style9 {
+  font-family: "Open Sans";
+  font-size: medium;
+  text-align: center;
+}
+.style10 {
+  font-family: "Open Sans";
+  text-align: center;
+  color: ;
+}
+</style>
+</head>
+
+<body style="margin: 50px">
+
+<h1 class="style8"> <a href="/goats"> Add Products </a> | <a href="/memDetails">Users List</a></h1>
+
+
+    <div class="container">
+      <h2 class="style10"> Product List</h2>
+    <table style="width: 100%">
+      <tr>
+        <td>&nbsp;</td>
+        <td style="width: 80%">
+
+          <form action="/products" method="post">
+            <div class="form-group">
+              <span class="style4">
+              <label for="goat_name"><strong>Product Name </strong></label>
+        </span><span class="style2"><span class="style6">
+        <span class="style7">
+              <input type="text" class="form-control" name="goat_name" placeholder="Otto von Bismarck"></span></span></span>
+              <p class="style4"><em>What is the name of your Phone ?</em></p>
+            </div>
+
+            <div class="form-group">
+              <span class="style4">
+              <label for="goat_color"><strong>Goat Color </strong></label>
+        </span>&nbsp;<span class="style2"><span class="style6"><span class="style7"><select class="form-control" id="goat_color" name="goat_color" title="Choose one of the following...">
+                <option data-hidden="true">Choose one</option>
+                <option value="black" selected>Black</option>
+                <option>Blue</option>
+        <option>Red</option>
+        <option>Indigo Black</option>
+        <option>Green</option>
+                <option value="white" selected>White</option>
+                <option value="brown" selected>Brown</option>
+                <option value="gray" selected>Gray</option>
+                <option value="multi-color" selected>Multi-Color</option>
+              </select></span></span></span>
+              <p class="style4"><em>What color is this phone?</em></p>
+            </div>
+
+            <div class="form-group">
+              <strong>B</strong><span class="style4"><label for="goat_sex" ><strong>rand 
+        of phone&nbsp; </strong></label></span><span class="style2">
+        <span class="style6"><span class="style7">
+              <select class="form-control" id="goat_sex" name="goat_sex">
+                <option>Apple</option>
+        <option>Samsung</option>
+        <option>Motorola</option>
+        <option>Google</option>
+        <option>LG</option>
+        <option>Vevo</option>
+        <option>Lenovo</option>
+        <option>Oppo</option>
+        <option>HTC</option>
+              </select></span></span></span>
+
+              <p class="style4"><em>What is the brand of phone</em></p>
+            </div>
+
+            <div class="form-group">
+              <span class="style4">
+              <label class="sr-only" for="goat_price"><strong>Amount (in rupees)</strong></label></span>
+        <span class="style2"><span class="style6"><span class="style7">&nbsp;
+                <input type="text" class="form-control" name="goat_price" placeholder="Amount"></span></span></span><p class="style4">
+        <em>How much for your mobile?</em></p>
+              <span class="style2"><label class="sr-only" for="userId">
+        <span class="style7"><strong>Picture id (in rupees)</strong></span></label><span class="style7">
+        </span><span class="style6"><span class="style7">&nbsp;
+                <input type="text" class="form-control" name="picture_url" placeholder="http://www.somepets.com/wp-content/uploads/2013/08/most-hilarious-animals6.jpg"></span></span></span></div>
+
+            <div class = "form-group">
+                <p class="style4"><em>Link of a picture of your phone </em> </p>
+        <p class="style4">&nbsp;</p>
+            </div>
+
+              <span class="style2">
+
+              <button class="btn btn-success btn-xs" type="submit">Submit Mobile</button>
+            </span></td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <h2 class="style8"> &nbsp;</h2>
+      </div>
+
+    <div class="container">
+      <h2 class="style9"> Products List </h2>
+      <table class="style3" style="width: 90%" align="center">
+        <thead>
+          <tr>
+           <th class="style1"> Name </th>
+           <th class="style1"> Color</th>
+           <th class="style1"> Model </th>
+           <th class="style1"> Price </th>
+           <th class="style1"> Picture URL </th>
+          </tr>
+        </thead>
+        <tbody>
+            <caption class="style4">{{#each goats}}
+              {{#unless this.goat_sold}}
+                <tr>
+                  <td class="style4">{{this.goat_name}}</td>
+                  <td class="style4">{{goat_color}}</td>
+                  <td class="style4">{{goat_sex}}</td>
+                  <td class="style4">{{goat_price}}</td>
+                  <td class="style4">{{picture_url}}</td>
+                </tr>
+              <caption class="style2">{{/unless}}
+            {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+

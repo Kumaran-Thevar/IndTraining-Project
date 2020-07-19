@@ -1,0 +1,136 @@
+<style type="text/css">
+
+.style35 {
+  text-align: center;
+  background-color: #FFFFFF;
+  font-family: "Open Sans";
+}
+.style36 {
+  text-align: center;
+}
+.style37 {
+  text-align: center;
+  font-size: xx-large;
+  font-family: "Open Sans";
+}
+.style38 {
+  color: #3366FF;
+  background-color: #FFFFFF;
+}
+
+.style30 {
+  color: #C0C0C0;
+}
+.style31 {
+  color: #C0C0C0;
+  font-family: "Open Sans";
+}
+.style32 {
+  background-color: #004DDA;
+}
+.style41 {
+  background-color: #C0C0C0;
+}
+
+
+</style>
+
+<h2 class="style37"> <span class="style38">Products</span> </h2>
+
+
+<div class="container">
+
+
+      <table class="style35" style="width: 80%; height: 80%" align="center">
+        <thead>
+          <tr>
+           <th> <class="style41"> Name </th>
+           <th> <class="style41"> Color</th>
+           <th> <class="style41"> Brand </th>
+           <th> <class="style41"> Price </th>
+           <th> <class="style41"> Picture </th>
+          </tr>
+        </thead>
+        <tbody>
+
+              <tr>
+              {{#each goats}}
+              {{#unless this.goat_sold}}
+                  <td> <class="style36">{{this.goat_name}}</td>
+                  <td>{{goat_color}}</td>
+                  <td>{{goat_sex}}</td>
+                  <td>{{goat_price}}</td>
+                  <td><img src = {{picture_url}} width="100px" height ="100px"></td>
+                  <td>
+                  <form action="/productsCat/submit/{{id}}" method="post">
+                      <input type="hidden" name="{{id}}" id="id">
+                      <button type="submit" name={{id}} id={{id}}>Buy Now</button>
+                  </form>
+                  </td>
+                </tr>
+              {{/unless}}
+              {{/each}}
+
+
+
+
+        </tbody>
+    </table>
+<br>
+<br>
+<br>
+
+<table style="width: 100%; background-color: #444444; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px">
+  <tr>
+    <td class="style31" style="width: 25%"><strong><span class="style26"><br />
+    QUICK LINKS<br />
+    </span></strong></td>
+    <td class="style30" style="width: 25%"><strong><span class="style26"><br />
+    CATEGORIES<br />
+    </span></strong></td>
+    <td class="style30" style="width: 25%"><strong><span class="style26"><br />
+    CONTACTS<br />
+    </span></strong></td>
+    <td class="style30" style="width: 25%"><strong><span class="style26"><br />
+    KEEP IN TOUCH<br />
+    </span></strong></td>
+  </tr>
+  <tr>
+    <td class="style31">About us</td>
+    <td class="style31">Clothes</td>
+    <td class="style31">info@allaia.com</td>
+    <td class="style31">Facebook</td>
+  </tr>
+  <tr>
+    <td class="style31">Faq</td>
+    <td class="style31">Electronics</td>
+    <td class="style31">+91 84338045</td>
+    <td class="style31">Twitter</td>
+  </tr>
+  <tr>
+    <td class="style31">Help</td>
+    <td class="style31">Furniture</td>
+    <td class="style31">Los angeles</td>
+    <td class="style31">Instagram</td>
+  </tr>
+  <tr>
+    <td class="style31">My account</td>
+    <td class="style31">Glasses</td>
+    <td class="style31">97845 baker</td>
+    <td class="style31">Linkedin</td>
+  </tr>
+  <tr>
+    <td class="style31">Blog</td>
+    <td class="style31">Shoes</td>
+    <td class="style31">Fax 8452845</td>
+    <td class="style31">Youtube</td>
+  </tr>
+</table>
+<table style="width: 100%" class="style32">
+  <tr>
+    <td style="height: 39px"></td>
+    <td class="style1" style="width: 80%; height: 39px">
+    <b style="font-family: arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;" class="style11">
+    
+  </tr>
+</table>

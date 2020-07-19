@@ -1,0 +1,64 @@
+
+
+	<div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Welcome <span class="member-name"></span></h2>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h2> Members List </h2>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+
+          <form action="/members" method="post">
+            <div class="form-group">
+              <label for="member_name"> Member Name </label>
+              <input type="text" class="form-control" name="member_name" placeholder="Otto von Bismarck">
+              <p class="help-block">What do people call you?</p>
+            </div>
+
+            <div class="form-group">
+              <label for="credit_card"> Credit Card Number </label>
+              <input type="text" class="form-control" name="credit_card" placeholder="1234 5678 0987 4321">
+              <p class="help-block">What is the number on your credit card?</p>
+            </div>
+
+            <div class="form-group">
+              <label for="address"> Address </label>
+              <input type="text" class="form-control" name="address" placeholder="1600 Pennsylvania Avenue">
+              <p class="help-block">Where will you goat be shipped??</p>
+            </div>
+
+              <button class="btn btn-success btn-xs" type="submit">Submit </button>
+            </div>
+          </form>
+
+
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+		<div class="container">
+      <h2> Members List </h2>
+      <table class="table table-hover">
+        <thead>
+            <tr>
+               <th> Name </th>
+               <th> Credit Card</th>
+               <th> Address </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each members}}
+            <tr>
+                <td>{{this.member_name}}</td>
+                <td>{{credit_card}}</td>
+                <td>{{address}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    	</table>
+		 </div>

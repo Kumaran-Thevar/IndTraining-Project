@@ -1,0 +1,80 @@
+<div class="container">
+
+  <h3> Welcome  </h3>
+
+
+
+<h2> User Logged In </h2>
+
+{{#each users}}
+
+  <input type="hidden" id="logedInId" name = {{id}}>
+  <input type="hidden" id="logedInEmail" name = {{email}}>
+  <input type="hidden" id="logedInPass" name = {{password}}>
+
+{{/each}}
+
+
+<h2> If you have the Login then Login </h2>
+
+          <form action="/loginMems" method="post">
+            <div class="form-group">
+              <label for="member_name"> Email Address </label>
+              <input type="text" class="form-control" name="email" placeholder = " andy@bcgt.com" id="email">
+            </div>
+
+            <div class="form-group">
+              <label for="credit_card"> Password </label>
+              <input type="text" class="form-control" name="password" placeholder = "iAmAwesome" id="password">
+            </div>
+
+            <button class="btn btn-success btn-xs" type="submit" id ="emailPass">Submit</button>
+
+        </form>
+
+<h3> If you dont have a login - Sign Up </h3>
+
+          <form action="/signUpMems" method="post">
+            <div class="form-group">
+              <label for="member_name"> Email Address </label>
+              <input type="text" class="form-control" name="nemail" placeholder = " shane@bcgt.com" id="newEmail">
+            </div>
+
+            <div class="form-group">
+              <label for="credit_card"> Password </label>
+              <input type="text" class="form-control" name="npassword" placeholder = "iAmFantastic" id="newPassword">
+            </div>
+
+            <button class="btn btn-success btn-xs" type="submit" id ="emailPass">Submit</button>
+
+        </form>
+
+</div>
+
+
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("#memberData").hide();
+            $("#memberSubmit").on("click",function(){
+                console.log("Member Data Submitted");
+                $("#memberData").show();
+                $("#enterMember").hide();
+                $("#adName").text($("#enName").val());
+                $("#adCredit").text($("#enCredit").val());
+                $("#adAdd").text($("#enAdd").val());
+                $("#Uid").name = id;
+                $("#Mid").name = "4";
+                $("#Gid").name = "5";
+            });
+        });
+
+        </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../public/js/members.js"></script>

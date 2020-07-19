@@ -1,0 +1,70 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+ul {
+list-style-type: none;
+}
+
+h1 {
+font-family: Roboto;
+}
+
+.welcomegoat {
+  text-align: center;
+  background-color: none;
+  font-family: Poppins;
+}
+
+.navgoat {
+  padding-top: 10px;
+  color: white;
+}
+
+.goatDay {
+  border: 2px solid gray;
+  background-color: #91E1CB;
+  font-family: Poppins;
+}
+
+.goatDay h2 {
+  font-size: 48px;
+}
+
+.goatDayborder {
+  border: 2px solid white;
+  outline: 2px solid gray;
+}
+
+.fa-color {
+  color: #3bb18f;
+}
+
+.btn-success {
+background-image: linear-gradient(to bottom,#3bb18f 0,#3bb18f 100%);
+border-color: #3bb18f;
+}
+
+.goatback {
+  background-color: #3bb18f;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.goatPhone {
+  padding-top: 25px;
+  padding-left: 20px;
+  color: white;
+}
+
+.newMem {
+  font-family: Bungee;
+  color: #3bb18f;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}

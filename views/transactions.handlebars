@@ -1,0 +1,138 @@
+
+<head>
+<style type="text/css">
+.style1 {
+  text-align: center;
+  font-family: "Open Sans";
+}
+.style2 {
+  text-align: left;
+}
+.style3 {
+  text-align: right;
+}
+.style4 {
+  font-family: "Open Sans";
+}
+.style5 {
+  text-align: left;
+  font-family: "Open Sans";
+}
+</style>
+</head>
+
+<div class="style3">
+
+<div class="container">
+
+    <div class="jumbotron welcomegoat">
+    </div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+    </div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Goat sold
+    <form action="/{{this.id}}?_method=PUT" method="POST">
+      <input type="hidden" name="devoured" value="true">
+      <button class="btn btn-success btn-xs" type="submit">Devour</button>
+    </form>
+    -->
+</div>
+  <table style="width: 100%">
+    <tr>
+      <td class="style4">&nbsp;</td>
+      <td style="width: 80%"><span class="style4">{{#each goats}}
+            </span>
+          <h3 class="style1">Selected product </h3>
+          <p hidden class="style4"> Id : {{id}}</p>
+          <h3 class="style4"> Name : {{goat_name}}</h3>
+          <p class="style4"> price : $ {{goat_price}} </p>
+            <span class="style4">
+          <img src= {{picture_url}} width="100px" height="100px"></span>
+          <div id="goatId" value={{id}} type="hidden"> </div>
+          <span class="style4">{{/each}}
+    </span></td>
+      <td class="style4">&nbsp;</td>
+    </tr>
+  </table>
+  <p class="style4">&nbsp;</p>
+  <table style="width: 100%">
+    <tr>
+      <td class="style4">&nbsp;</td>
+      <td style="width: 80%">
+
+    <div id="enterMember">
+
+      <h3 class="style1"> Add Shipping Details </h3>
+
+      <form action="/memAddTrans" method="post">
+        <div class="style2">
+        <div class="form-group">
+          <label for="member_name"> <span class="style4"><strong>Member Name</strong>
+      </span> </label>
+          <span class="style4">
+          <input type="text" class="form-control" name="member_name" placeholder=" Donald Trump" id="enName"></span>
+          <p class="style4">What is your name?</p>
+        </div>
+
+        <div class="form-group">
+          <label for="credit_card"> <span class="style4"><strong>Credit Card Details</strong>
+      </span> </label>
+          <span class="style4">
+          <input type="text" class="form-control" name="credit_card" placeholder="45813678256" id="enCredit"></span>
+          <p class="style4">What is your credit card number?</p>
+        </div>
+
+        <div class="form-group">
+          <label for="address"> <span class="style4"><strong>Address</strong>
+      </span> </label>
+          <span class="style4">
+          <input type="text" class="form-control" name="address" placeholder="White House" id="enAdd"></span>
+          <p class="style4">Where will your new goat call home?</p>
+        </div>
+
+          <span class="style4">
+
+        <button class="btn btn-success btn-xs" type="submit" id ="memberSubmit">Add Details</button>
+          <br>
+      </span></div>
+      </form>
+
+      <ul>
+        <h5><li><span class="style4"><strong>Your Name </strong>: {{output.member_name}}</li></span></h5>
+        <h5><li><span class="style4"><strong>Credit Card No</strong> : {{output.credit_card}}</li></span></h5>
+        <h5><li class="style4"><strong>Billing Address</strong> :{{output.address}}</li>
+      </ul>
+
+
+    </div>
+    </hr>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!--
+    <div id="memberData">
+        Shipping Name : <div id="adName"></div>
+        Credit Card Number : <div id="adCredit"></div>
+        Address : <div id = "adAdd"></div>
+-->
+
+      <form action="/transDone" method="post">
+        <div class="style5">
+        <input type="hidden" name=UserId id="Uid" value ="0">
+        <input type="hidden" name=MemberId id="Mid" value ={{output.id}}>
+        <input type="hidden" name=GoatId id="Gid" value={{goats.id}}>
+
+
+        <button class="btn btn-success btn-xs" type="submit" id ="transSubmit">Finalize the Transaction</button>
+        </div>
+      </form>
+        </td>
+      <td class="style4">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+
+<br>
+<br>  
